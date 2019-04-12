@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>galton</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="../static/css/home.css">
+</head>
+<body>
+<nav class="navbar" id="start" style="z-index: 1; position: fixed; left: 0px; top: 0px">
+    <div class="nav-wrapper">
+        <a class="brand-logo center text-darken-4">&nbsp;Galtons table</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="/galtons_table">Galtons table</a></li>
+            <li><a href="/different">Different chances</a></li>
+            <li><a href="/line">Line</a></li>
+            <li><a></a></li>
+        </ul>
+    </div>
+</nav>
+<br><br><br><br><br><br><br>
+
+<div class="row">
+    <div class="col s12 offset-s2">
+        <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Результат</h3><br>
+
+    </div>
+</div>
+<div class="row">
+    <div class="column col s12 offset-s0">
+        {{result}}
+    </div>
+</div>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+<script src="../static/js/check_sign_up.js"></script>
+<script>
+    $(document).ready(function() {
+        Materialize.updateTextFields();
+    });
+</script>
+<style>
+    div.gistagramm {
+    height: 200px;
+    width: 30%;
+    margin-left: 20%;
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 2px solid black;
+    border-left: 2px solid black;
+    margin-top: 20px;
+    }
+
+    div.coloumn {
+        width: 12%;
+        background: rgb(10, 187, 187);
+        height: 0%;
+        text-align: center;
+        align-self: flex-end;
+        transition: all 1s ease-out;
+    }
+</style>
+
+<script>
+    function process_gist() {
+    var gists = document.getElementsByClassName("gistagramm");
+    for (var i = 0; i < gists.length; i++) {
+        var cols = gists[i].getElementsByClassName("coloumn");
+        var sum = 0;
+        for (var j = 0; j < cols.length; j++) {
+            sum += parseInt(cols[j].dataset.val);
+        }
+        for (var j = 0; j < cols.length; j++) {
+            cols[j].style.height = parseInt(cols[j].dataset.val) / sum * 90 + "%";
+            cols[j].style.marginTop = parseInt(cols[j].dataset.val) / sum * 90 + "%";
+            cols[j].innerHTML = "<p style='margin-top: -20px'>" + cols[j].dataset.val + "</p>";
+        }
+    }
+}
+
+window.onload = function() {
+    process_gist();
+}
+</script>
+
+</body>
+</html>

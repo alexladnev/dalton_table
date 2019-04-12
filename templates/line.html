@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>galton</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="../static/css/home.css">
+</head>
+<body>
+<nav class="navbar" id="start" style="z-index: 1; position: fixed; left: 0px; top: 0px">
+    <div class="nav-wrapper">
+        <a class="brand-logo center text-darken-4">&nbsp;Galtons table</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="/galtons_table">Galtons table</a></li>
+            <li><a href="/different">Different chances</a></li>
+            <li><a href="/line">Line</a></li>
+            <li><a></a></li>
+        </ul>
+    </div>
+</nav>
+<br><br><br><br><br><br><br><br><br><br>
+<form method="post">
+    <div align="center">
+        <div class="row">
+            <div class="input-field col s4 offset-s2">
+                &nbsp;<input id="stringi1" name="stringi1" type="number">
+                <label for="stringi1" id="label_stringi1">Номер строки<font color="red">&nbsp;*</font></label>
+            </div>
+        </div>
+        <br>
+        <button type="submit" class="btn">Сформировать</button>
+    </div>
+</form>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+<script src="../static/js/check_sign_up.js"></script>
+<script>
+    $(document).ready(function() {
+        Materialize.updateTextFields();
+    });
+</script>
+</body>
+</html>
