@@ -36,4 +36,5 @@ def line():
         return render_template("hui.html", result=result)
     return render_template("line.html")
 
-
+if __name__ == '__main__':
+    app.run()
