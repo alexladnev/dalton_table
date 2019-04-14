@@ -37,6 +37,3 @@ def line():
     return render_template("line.html")
 
 
-if __name__ == '__main__':
-    app.run(debug=True)
-
