@@ -1,3 +1,4 @@
+import os
 from flask import *
 from galtons_table import get
 from different_chances import ggg
@@ -37,4 +38,5 @@ def line():
     return render_template("line.html")
 
 if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0', port=33507)
+	port = int(os.environ.get('PORT', 5000))
+	app.run(debug=True, host='0.0.0.0', port=port)
