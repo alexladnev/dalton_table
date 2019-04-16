@@ -90,7 +90,11 @@ def get(n, k):
         count = count + 1
     result = []
     while az < n + 1:
-        Z[az] = Q[az] // 100
-        result.append(Z[az])
+        Z[az] = Q[az] / 100
+        if (Z[az]-(Z[az]//1)) >= 0.5:
+            Q[az]=(Z[az]//1 + 1)
+        else:
+            Q[az]=(Z[az]//1)
+        result.append(Q[az])
         az = az + 1
     return result
