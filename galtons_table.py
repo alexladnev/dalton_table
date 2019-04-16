@@ -91,7 +91,7 @@ def get(n, k):
     result = []
     while az < n + 1:
         Z[az] = Q[az] / 100
-        if (Z[az]-(Z[az]//1)) <= 0.5:
+        if (Z[az]-(Z[az]//1)) >= 0.5:
             Q[az]=(Z[az]//1 + 1)
         else:
             Q[az]=(Z[az]//1)
