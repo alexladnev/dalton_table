@@ -24,7 +24,7 @@ def onechance():
     if request.method == "POST":
         number = int(request.form["stringi1"])
         count = int(request.form["stringi2"])
-        prob = float(request.form["stringi3"])
+        prob = list(map(float, request.form["stringi3"].split(", ")))
         result = gggggg(number, count, prob)
         return render_template("result.html", result=result)
     return render_template("nochance.html")
