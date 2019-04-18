@@ -1,6 +1,6 @@
 import random
 
-def ggg(n, k, prob):
+def gggggg(n, k, prob):
     A = [0] * (k + 1)
     B = [0] * (k + 1)
     C = [0] * (k + 1)
