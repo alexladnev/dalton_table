@@ -1,6 +1,7 @@
 import os
 from flask import *
 from galtons_table import get
+from similar import gggggg
 from different_chances import ggg
 from line import ggggg
 app = Flask(__name__)
@@ -17,6 +18,16 @@ def main():
         result = get(int(number), int(count))
         return render_template("result.html", result=result)
     return render_template("dalton.html")
+
+@app.route("/similar", methods=["GET", "POST"])
+def onechance():
+    if request.method == "POST":
+        number = int(request.form["stringi1"])
+        count = int(request.form["stringi2"])
+        prob = float(request.form["stringi3"])
+        result = gggggg(number, count, prob)
+        return render_template("result.html", result=result)
+    return render_template("nochance.html")
 
 @app.route("/different", methods=["GET", "POST"])
 def chance():
