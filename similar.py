@@ -20,7 +20,7 @@ def gggggg(n, k, prob):
     p = 0
     result = []
     if n == 1:
-        a = prob
+        a = prob[0]
         A[0] = a * 1000000
         while p < k:
             f = random.randint(0, 1000000)
@@ -36,7 +36,7 @@ def gggggg(n, k, prob):
 
     elif n == 2:
         while j < 3:
-            A[j] = prob
+            A[j] = prob[0]
             C[j] = 1 - A[j]
             j += 1
 
@@ -64,7 +64,7 @@ def gggggg(n, k, prob):
 
     elif n == 3:
         while j < 6:
-            A[j] = prob
+            A[j] = prob[0]
             C[j] = 1 - A[j]
             j = j + 1
 
@@ -102,7 +102,7 @@ def gggggg(n, k, prob):
 
     elif n == 4:
         while j < 10:
-            A[j] = prob
+            A[j] = prob[0]
             C[j] = 1 - A[j]
             j = j + 1
 
@@ -148,7 +148,7 @@ def gggggg(n, k, prob):
 
     elif n == 5:
         while j < 15:
-            A[j] = prob
+            A[j] = prob[0]
             C[j] = 1 - A[j]
             j = j + 1
 
@@ -202,7 +202,7 @@ def gggggg(n, k, prob):
 
     elif n == 6:
         while j < 21:
-            A[j] = prob
+            A[j] = prob[0]
             C[j] = 1 - A[j]
             j = j + 1
 
@@ -267,7 +267,7 @@ def gggggg(n, k, prob):
 
     elif n == 7:
         while j < 28:
-            A[j] = prob
+            A[j] = prob[0]
             C[j] = 1 - A[j]
             j = j + 1
 
@@ -343,7 +343,7 @@ def gggggg(n, k, prob):
 
     elif n == 8:
         while j < 36:
-            A[j] = prob
+            A[j] = prob[0]
             C[j] = 1 - A[j]
             j = j + 1
 
@@ -431,7 +431,7 @@ def gggggg(n, k, prob):
 
     elif n == 9:
         while j < 45:
-            A[j] = prob
+            A[j] = prob[0]
             C[j] = 1 - A[j]
             j = j + 1
 
@@ -532,7 +532,7 @@ def gggggg(n, k, prob):
 
     elif n == 10:
         while j < 55:
-            A[j] = prob
+            A[j] = prob[0]
             C[j] = 1 - A[j]
             j = j + 1
 
